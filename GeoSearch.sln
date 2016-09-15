@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoSearch.WebUI", "GeoSearch.WebUI\GeoSearch.WebUI.csproj", "{0D990F0C-EC99-4E63-BE83-F1DEA8A70009}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoSearch.Model", "GeoSearch.Model\GeoSearch.Model.csproj", "{6F3CA2DF-5A67-4B9F-ADF3-1BF39543B620}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{0D990F0C-EC99-4E63-BE83-F1DEA8A70009}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D990F0C-EC99-4E63-BE83-F1DEA8A70009}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D990F0C-EC99-4E63-BE83-F1DEA8A70009}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F3CA2DF-5A67-4B9F-ADF3-1BF39543B620}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F3CA2DF-5A67-4B9F-ADF3-1BF39543B620}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F3CA2DF-5A67-4B9F-ADF3-1BF39543B620}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F3CA2DF-5A67-4B9F-ADF3-1BF39543B620}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

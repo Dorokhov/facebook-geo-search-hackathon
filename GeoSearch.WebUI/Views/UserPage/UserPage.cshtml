@@ -1,0 +1,27 @@
+﻿@model GeoSearch.WebUI.Controllers.GeoLocation
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UserPage</title>
+</head>
+<body>
+<div>
+    @using (Html.BeginForm())
+    {
+        @Html.TextBoxFor(s => s.Name)
+            <input type="submit" value="Generate report" />
+    }
+    @*<p>coordinates</p>
+    @Html.TextBoxFor(s => s.Name)
+    <button type="button" value="find friends" onclick="location.href = '@Url.Action("FindFriends", "UserPage", new {@id="coordinates"})'">Find Friends</button>
+    <div id="friends"></div>*@
+</div>
+</body>
+</html>

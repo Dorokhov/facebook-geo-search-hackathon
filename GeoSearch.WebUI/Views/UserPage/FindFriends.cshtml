@@ -1,0 +1,31 @@
+﻿@model GeoSearch.WebUI.Controllers.GeoLocation
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FindFriends</title>
+</head>
+<body>
+<div>
+
+    @using (Html.BeginForm())
+    {
+        @Html.TextBoxFor(s => s.Coordinates)
+        <input type="submit" value="Submit" />
+    }
+    @*@if (@Model.Users != null)
+    {
+        foreach (var item in @Model.Users)
+        {
+            <a href="@item.Url">@item.FirstName @item.SecondName</a><br />
+        }
+    }*@
+</div>
+</body>
+</html>
