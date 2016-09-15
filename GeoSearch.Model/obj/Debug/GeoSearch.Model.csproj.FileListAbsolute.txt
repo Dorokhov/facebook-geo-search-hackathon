@@ -1,0 +1,5 @@
+C:\My Disk\development\Hackaton\facebook-geo-search-hackathon\GeoSearch.Model\bin\Debug\GeoSearch.Model.dll
+C:\My Disk\development\Hackaton\facebook-geo-search-hackathon\GeoSearch.Model\bin\Debug\GeoSearch.Model.pdb
+C:\My Disk\development\Hackaton\facebook-geo-search-hackathon\GeoSearch.Model\obj\Debug\GeoSearch.Model.dll
+C:\My Disk\development\Hackaton\facebook-geo-search-hackathon\GeoSearch.Model\obj\Debug\GeoSearch.Model.pdb
+C:\My Disk\development\Hackaton\facebook-geo-search-hackathon\GeoSearch.Model\obj\Debug\GeoSearch.Model.csprojResolveAssemblyReference.cache
