@@ -17,15 +17,16 @@
     @using (Html.BeginForm("PostFriends", "UserPage"))
     {
         @Html.TextBoxFor(s => s.Coordinates)
+        @Html.TextBoxFor(s=>s.Radius)
         <input type="submit" value="Submit" />
     }
-    @*@if (@Model.Users != null)
+    @if (@Model.Users != null)
     {
         foreach (var item in @Model.Users)
         {
-            <a href="@item.Url">@item.FirstName @item.SecondName</a><br />
+            <a href="@item.Link">@item.FirstName @item.LastName</a><br />
         }
-    }*@
+    }
 </div>
 </body>
 </html>

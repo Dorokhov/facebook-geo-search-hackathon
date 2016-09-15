@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI;
 using GeoSearch.Model;
 using GeoSearch.WebUI.Models;
 
@@ -29,15 +30,20 @@ namespace GeoSearch.WebUI.Controllers
         {
             
             // find logic
-            return View(new GeoLocation() {Coordinates = "4"});
+            return View(new GeoLocation() { Coordinates = "50.474680 30.511010" , Radius = "1"});
         }
         // GET: UserPage
         [HttpPost]
         public ActionResult PostFriends(GeoLocation geoLocation)
         {
-            //_geoRepo.GetGeo();
+            var coord = geoLocation.Coordinates.Split(new string[] { " " }, StringSplitOptions.None);
+            double[] dcoords = new[] {Double.Parse(coord[0]), double.Parse(coord[1])};
+            int radius = Int32.Parse(geoLocation.Radius);
 
-            // find logic
+            var users = _geoRepo.GetGeo(dcoords[0], dcoords[1], radius);
+
+            geoLocation.Users = users;
+                // find logic
             return View(geoLocation);
         }
     }
@@ -45,6 +51,7 @@ namespace GeoSearch.WebUI.Controllers
     public class GeoLocation
     {
         public string Coordinates { get; set; }
-         public IEnumerable<User> Users { get; set; }
+        public string Radius { get; set; }
+         public IEnumerable<UserDatails> Users { get; set; }
     }
 }
