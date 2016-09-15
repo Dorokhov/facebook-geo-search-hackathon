@@ -4,12 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using GeoSearch.Model;
+using GeoSearch.WebUI.Models;
 
 namespace GeoSearch.WebUI.Controllers
 {
     public class UserPageController : Controller
     {
         private User user;
+        private GeoRepo _geoRepo;
         
 
         private GeoLocation friends = new GeoLocation()
@@ -27,24 +29,22 @@ namespace GeoSearch.WebUI.Controllers
         {
             
             // find logic
-            return View(new GeoLocation());
+            return View(new GeoLocation() {Coordinates = "4"});
         }
         // GET: UserPage
         [HttpPost]
-        public ActionResult FindFriends(GeoLocation coordinates)
+        public ActionResult PostFriends(GeoLocation geoLocation)
         {
-           
+            //_geoRepo.GetGeo();
+
             // find logic
-            return View(coordinates);
+            return View(geoLocation);
         }
-
-        
-
     }
 
     public class GeoLocation
     {
         public string Coordinates { get; set; }
-       // public IEnumerable<User> Users { get; set; }
+         public IEnumerable<User> Users { get; set; }
     }
 }

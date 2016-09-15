@@ -1,8 +1,8 @@
 ﻿@model GeoSearch.WebUI.Controllers.GeoLocation
 
-@{
+@*@{
     Layout = null;
-}
+}*@
 
 <!DOCTYPE html>
 
@@ -14,7 +14,7 @@
 <body>
 <div>
 
-    @using (Html.BeginForm())
+    @using (Html.BeginForm("PostFriends", "UserPage"))
     {
         @Html.TextBoxFor(s => s.Coordinates)
         <input type="submit" value="Submit" />
