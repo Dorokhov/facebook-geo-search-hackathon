@@ -1,3 +1,6 @@
 /GeoSearch.WebUI/bin
 
 /GeoSearch.WebUI/obj
+/
+/GeoSearch.Tests/obj
+GeoSearch.Tests/bin
