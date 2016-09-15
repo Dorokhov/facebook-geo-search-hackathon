@@ -11,7 +11,7 @@ namespace GeoSearch.Tests
         public void TestMethod1()
         {
             var repo = new GeoRepo();
-            repo.GetGeo();
+            repo.GetGeo(50.474680, 30.511010, 1);
         }
     }
 }
