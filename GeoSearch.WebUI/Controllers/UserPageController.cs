@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -12,7 +13,7 @@ namespace GeoSearch.WebUI.Controllers
     public class UserPageController : Controller
     {
         private User user;
-        private GeoRepo _geoRepo;
+        private GeoRepo _geoRepo = new GeoRepo();
         
 
         private GeoLocation friends = new GeoLocation()
@@ -34,13 +35,13 @@ namespace GeoSearch.WebUI.Controllers
         }
         // GET: UserPage
         [HttpPost]
-        public ActionResult PostFriends(GeoLocation geoLocation)
+        public ActionResult FindFriends(GeoLocation geoLocation)
         {
             var coord = geoLocation.Coordinates.Split(new string[] { " " }, StringSplitOptions.None);
-            double[] dcoords = new[] {Double.Parse(coord[0]), double.Parse(coord[1])};
+            double[] dcoords = new[] {Double.Parse(coord[0], CultureInfo.InvariantCulture), double.Parse(coord[1], CultureInfo.InvariantCulture) };
             int radius = Int32.Parse(geoLocation.Radius);
 
-            var users = _geoRepo.GetGeo(dcoords[0], dcoords[1], radius);
+            var users = _geoRepo.GetGeo(dcoords[0], dcoords[1], radius).ToList();
 
             geoLocation.Users = users;
                 // find logic
